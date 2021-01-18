@@ -1,0 +1,306 @@
+/*********************************
+
+Login/Create Account Page
+
+*********************************/
+
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+}
+
+#master {
+    height: 100vh;
+    width: 100%;
+}
+
+#sub-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25%;
+    background-color: #2d2d2d;
+    color: #FFF;
+}
+
+#sub-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+#logo {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+#description {
+    color: #bababa;
+}
+
+#main-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 75%;
+    background: #202020;
+}
+
+#main-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#account-title {
+    font-family: impact;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 55px;
+    color: #FFF;
+    padding-bottom: 30px;
+    white-space: nowrap;
+}
+
+#account-title i {
+    color: #b0f8b2;
+    font-size: 50px;
+    font-style: italic;
+    margin-left: 5px;
+}
+
+#account-form {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 22px;
+    background: black;
+    padding: 20px 0;
+    margin-bottom: 25px;
+    border-radius: 1.5px;
+    display: block;
+    width: 275px;
+}
+
+.account-input {
+    width: 80%;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#account-button {
+    margin-top: 15px;
+    width: 80%;
+    border: none;
+    color: #FFF;
+}
+
+#incorrect-input {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #ff4642;
+}
+
+#create-account-text {
+    font-size: 24px;
+    color: #bababa;
+    white-space: nowrap;
+}
+
+#create-account-text a {
+    color: #AAF0C1;
+}
+
+#success-text {
+    color: #FFF;
+}
+
+#login-button {
+    background: #AAF0C1;
+    padding: 6px;
+    font-size: 18px;
+    width: 100px;
+    height: 16px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+}
+
+#login-button a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: #000;
+}
+
+/*********************************
+
+My Account Page
+
+*********************************/
+
+#account-title.account-settings {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.profile-pic {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#user-pic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    width: 60px;
+}
+
+#image-cropper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    border: 1px solid #141414;
+    z-index: 1;
+}
+
+#image-cropper.clicked {
+    border: 3px solid #b0f8b2;
+    top: 8px;
+    right: 8px;
+}
+
+#profile-options {
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    height: 60px;
+}
+
+#profile-options form {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#logout-button {
+    margin-right: -500px;
+    transition-duration: .35s;
+}
+
+#logout-button.shown {
+    margin-right: 0;
+    transition-duration: .35s;
+}
+
+#home-button {
+    margin-right: -500px;
+    transition-duration: .35s;
+}
+
+#home-button.shown {
+    margin-right: 0;
+    transition-duration: .35s;
+}
+
+.user-button {
+    border: none;
+    background: #101010;
+    color: #FFF;
+    border-radius: 3px;
+    font-family: Impact;
+    font-style: italic;
+    font-size: 20px;
+    padding: 5px;
+    padding-right: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.user-button:hover {
+
+    color: #b0f8b2;
+}
+
+#account-forms-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #000;
+    color: #FFF;
+    width: 360px;
+    padding: 30px;
+    border-radius: 1.5px;
+}
+
+.form-title {
+    padding-bottom: 10px;
+}
+
+#upload-photo {
+    margin-bottom: 40px;
+}
+
+.account-input-button {
+    background: #0f3923;
+    font-family: Impact;
+    font-style: italic;
+    font-size: 17px;
+    padding: 3px;
+    border-radius: 2.5px;
+    padding-right: 8px;
+    white-space: nowrap;
+}
+
+#file-name {
+    color: #b0f8b2;
+}
+
+#toUpload {
+    display: none;
+}
+
+#file-submit {
+    display: none;
+}
+
+#toSubmit {
+    display: none;
+}
+
+#password {
+    width: calc(100% - 154px);
+}
+
+#change-password {
+    display: none;
+}
+
+.success {
+    color: #b0f8b2;
+}
