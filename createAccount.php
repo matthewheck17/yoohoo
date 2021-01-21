@@ -60,7 +60,7 @@
                                     $accountCreationFail = true;
                                 }else{
                                     $stmt = $conn->prepare("INSERT INTO users (username, password, imageFileName) VALUES (?, ?, ?)");
-                                    $stmt->bind_param('sss', $_POST['username'], $_POST['password'], $file = "default.png");
+                                    $stmt->bind_param('sss', $_POST['username'], password_hash($_POST['password'], PASSWORD_DEFAULT), $file = "default.png");
                                     $stmt->execute();
                                     $accountCreated = true;
                                     $accountCreationFail = false;

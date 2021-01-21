@@ -88,8 +88,8 @@
                 </form>  
                 <?php
                     if(isset($_POST['password'])){
-                        $stmt=$conn->prepare("UPDATE users SET password = '".$_POST['password']."' WHERE user_id = ?");
-                        $stmt->bind_param('s', $_SESSION['user_id']);
+                        $stmt=$conn->prepare("UPDATE users SET password = ? WHERE user_id = ?");
+                        $stmt->bind_param('ss', password_hash($_POST['password'], PASSWORD_DEFAULT), $_SESSION['user_id']);
                         $stmt->execute(); 
                         echo '<div class="success">Password has been updated.</div>';
                     }
